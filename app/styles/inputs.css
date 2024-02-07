@@ -1,0 +1,120 @@
+.btn {
+   border-radius: 5px;
+   padding: 0.8rem;
+   box-sizing: border-box;
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+}
+
+select {
+   padding: 0.7rem !important;
+   color: title;
+   background: var(--input-background);
+   border-radius: 8px;
+   border: 1px solid #d2d2d2;
+   width: 15vw;
+}
+
+input {
+   border: 1px solid #d2d2d2;
+   border-radius: 8px;
+   padding: 0.5rem !important;
+}
+
+button:disabled {
+   opacity: 0.5;
+}
+
+button:disabled:hover {
+   cursor: not-allowed;
+}
+
+.btn-primary--tab {
+   background: var(--primary-color) !important;
+   color: var(--tertiary-color);
+   transition: background-color 0.3s ease;
+}
+
+.btn-left--tab {
+   border-radius: 0.5rem 0 0 0;
+}
+
+.btn-right--tab {
+   border-radius: 0 0.5rem 0 0;
+}
+
+.btn-primary--tab:hover {
+   background: #ff9833;
+}
+
+.btn-secondary--tab {
+   background: #f5f5f5 !important;
+   color: var(--subtitle-text);
+   transition: background-color 0.3s ease;
+   border-radius: 0 0.5rem 0 0;
+   box-shadow: 0px 2px 4px rgba(39, 36, 36, 0.25);
+}
+
+.btn-secondary--tab:hover {
+   background: #eeecec;
+}
+
+.custom-text__btn {
+   margin-right: auto;
+   margin-left: 10px;
+}
+
+.custom-input-date {
+   display: flex;
+   align-items: center;
+   background: var(--input-background);
+   color: var(--subtitle-text);
+   padding: 0.29rem;
+   border-radius: 8px;
+}
+
+.custom-input-date-wrapper {
+   display: flex;
+   justify-content: flex-start;
+   gap: 5rem;
+   align-items: center;
+   color: var(--subtitle-text);
+   border-radius: 8px;
+}
+
+.custom-tag {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   color: var(--tertiary-color);
+   border-radius: 8px;
+   padding: 0.5rem;
+   background: var(--secondary-color);
+   gap: 0.5rem;
+}
+
+.search-container {
+   display: flex;
+   align-items: center;
+   background: var(--input-background);
+   padding: 0.29rem;
+   border: 1px solid #d2d2d2;
+   border-radius: 8px;
+}
+
+.icon-left,
+.icon-right {
+   padding: 5px;
+}
+
+.icon-left {
+   margin-right: 1vw;
+}
+
+.search-input {
+   flex-grow: 2;
+   border: none;
+   background-color: transparent;
+   width: 23vw;
+}
