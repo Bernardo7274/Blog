@@ -1,0 +1,127 @@
+.form__post {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   height: auto;
+   padding-bottom: 2rem;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   border-radius: 8px;
+}
+
+.container__text, .container__multimedia {
+   display: flex;
+   flex-direction: column;
+   padding: 0 3%;
+   transition: all 0.3s ease;
+}
+
+.container__text {
+   width: 55%;
+   height: auto;
+}
+
+.container__multimedia {
+   width: 45%;
+}
+
+.container-identifiers, .container-indentifiers__body {
+   display: flex;
+   width: 100%;
+   height: auto;
+   padding: 2% 3%;
+   align-items: center;
+   justify-content: flex-start;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.container-identifiers {
+   flex-direction: column;
+   gap: 3%;
+}
+
+.container-indentifiers__body {
+   flex-direction: row;
+}
+
+.container__subtitle {
+   display: flex;
+   width: 100%;
+   height: 10vh;
+   align-items: center;
+   justify-content: flex-start;
+   font-size: 28px;
+   padding: 1rem 0;
+}
+
+.container__subtitle h3 {
+   font-size: 24px;
+   font-weight: 400;
+}
+
+.container__inputs {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   row-gap: 2vh;
+}
+
+.container__inputs input:focus, .container__inputs textarea:focus {
+   outline: none;
+   box-shadow: 0 0 0 2px #607EE9;
+}
+
+.container__tags {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   height: auto;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: flex-start;
+   margin-top: 2rem;
+   gap: 1rem;
+}
+
+.container__tags div {
+   transition: transform 0.2s ease;
+}
+
+.container__tags div:hover {
+   transform: scale(1.05);
+}
+
+.container__btns__multimedia {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   height: auto;
+   padding: 4% 0;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+button:hover {
+   opacity: 0.8;
+}
+
+button:active {
+   transform: scale(0.98);
+}
+
+@media (max-width: 1078px) {
+   .form__post {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding-bottom: 2rem;
+   }
+   .container__text, .container__multimedia {
+      width: 100%;
+   }
+   .container-identifiers {
+      padding: 1rem;
+   }
+   .container__inputs .container__inputs-buttons {
+      flex-direction: column;
+   }
+}

@@ -1,0 +1,225 @@
+@import './loading.css';
+@import './header.css';
+@import './admin.css';
+@import './inputs.css';
+@import './card.css';
+@import './categories.css';
+@import './formPost.css';
+@import './cardcarousel.css';
+@import 'detailPost.css';
+@import './hammond.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+   --background: #fbfbfb;
+   --background-dark: #2c2c2c;
+   --background-container: #e8e8e8;
+   --background-start-rgb: 214, 219, 220;
+   --background-end-rgb: 255, 255, 255;
+   --form-background-color: #dfdfdf;
+   --title-text: #232323;
+   --subtitle-text: #2c2c2c;
+   --normal-text: #7a7a7a;
+   --primary-color: #ff8900;
+   --secondary-color: #607ee9;
+   --tertiary-color: #f3f2f7;
+   --input-background: #f4f4f4;
+   --alternative-text-color: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+   :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+   }
+   
+   body {
+    background: var(--background-dark);
+    color: rgba(var(--foreground-rgb), 0.87);
+  }
+
+  .card, .container {
+    background: #333;
+    color: #fff;
+  }
+}
+
+body {
+   background: var(--background);
+}
+
+.title, .subtitle, .text, .title-bold, .subtitle-bold, .text-bold, .alternative-title, .alternative-subtitle, .alternative-text, .alternative-title-bold, .alternative-subtitle-bold, .alternative-text-bold {
+   transition: color 0.3s ease;
+}
+
+.title {
+   color: var(--title-text);
+   font-size: 32px;
+}
+
+.subtitle {
+   color: var(--subtitle-text);
+   font-size: 20px;
+}
+
+.text {
+   color: var(--normal-text);
+   font-size: 15px;
+}
+
+.title-bold {
+   color: var(--title-text);
+   font-size: 32px;
+   font-weight: bold;
+}
+
+.subtitle-bold {
+   color: var(--subtitle-text);
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.text-bold {
+   color: var(--normal-text);
+   font-size: 15px;
+   font-weight: bold;
+}
+
+.text-ellipsis {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.alternative-title {
+   color: var(--primary-color);
+   font-size: 32px;
+}
+
+.alternative-subtitle {
+   color: var(--primary-color);
+   font-size: 20px;
+}
+
+.alternative-text {
+   color: var(--primary-color);
+   font-size: 15px;
+}
+
+.alternative-title-bold {
+   color: var(--primary-color);
+   font-size: 32px;
+   font-weight: bold;
+}
+
+.alternative-subtitle-bold {
+   color: var(--primary-color);
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.alternative-text-bold {
+   color: var(--primary-color);
+   font-size: 15px;
+   font-weight: bold;
+}
+
+.br-top {
+   border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.br-left {
+   border-radius: 0 0.5rem 0 0;
+}
+
+.btn-primary {
+   background: var(--primary-color);
+   color: var(--tertiary-color);
+   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+   border-radius: 0.5rem;
+}
+
+.btn-primary:hover {
+   background: #ff9833;
+   transform: translateY(-2px);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-xl img {
+   border-radius: 0.75rem;
+}
+
+.fadeIn {
+   animation: 1s ease-out 0s 1 fadeIn;
+}
+
+@keyframes fadeIn {
+   0% {
+      transform: translateX(-100%);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+.container-not-found {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+   background-image: url('/assets/images/wallpaper-cat.jpg');
+}
+
+.container-not-found img {
+   background-color: #ffffff;
+   border-radius: 50%;
+}
+
+.card, .container {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover, .container:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+input, textarea {
+  border: 1px solid var(--input-background);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 137, 0, 0.2);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fadeInLeft {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}

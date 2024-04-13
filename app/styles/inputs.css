@@ -1,0 +1,135 @@
+/* Button Styles */
+.btn {
+   border-radius: 5px;
+   padding: 0.8rem;
+   box-sizing: border-box;
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: 500;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .btn:focus {
+   outline: none;
+   box-shadow: 0 0 0 2px var(--primary-color);
+ }
+ 
+ select {
+   padding: 0.7rem !important;
+   color: title;
+   background: var(--input-background);
+   border-radius: 8px;
+   border: 1px solid #d2d2d2;
+   width: 15vw;
+   appearance: none;
+   font-weight: 500;
+ }
+ 
+ select::-ms-expand {
+   display: none;
+ }
+ 
+ input {
+   border: 1px solid #d2d2d2;
+   border-radius: 8px;
+   padding: 0.5rem !important;
+   font-weight: 500;
+ }
+ 
+ button:disabled {
+   opacity: 0.5;
+   cursor: not-allowed;
+ }
+ 
+ /* Primary Button Styles */
+ .btn-primary--tab {
+   background: var(--primary-color) !important;
+   color: var(--tertiary-color);
+   transition: background-color 0.3s ease;
+ }
+ 
+ .btn-primary--tab:hover {
+   background: #ff9833;
+ }
+ 
+ /* Secondary Button Styles */
+ .btn-secondary--tab {
+   background: #f5f5f5 !important;
+   color: var(--subtitle-text);
+   transition: background-color 0.3s ease;
+   border-radius: 0 0.5rem 0 0;
+   box-shadow: 0px 2px 4px rgba(39, 36, 36, 0.25);
+ }
+ 
+ .btn-secondary--tab:hover {
+   background: #eeecec;
+ }
+ 
+ /* Custom Input Styles */
+ .custom-text__btn {
+   margin-right: auto;
+   margin-left: 10px;
+ }
+ 
+ .custom-input-date {
+   display: flex;
+   align-items: center;
+   background: var(--input-background);
+   color: var(--subtitle-text);
+   padding: 0.29rem;
+   border-radius: 8px;
+   font-weight: 500;
+ }
+ 
+ .custom-input-date-wrapper {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   color: var(--subtitle-text);
+   border-radius: 8px;
+   font-weight: 500;
+ }
+ 
+ /* Custom Tag Styles */
+ .custom-tag {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   color: var(--tertiary-color);
+   border-radius: 8px;
+   padding: 0.5rem;
+   background: var(--secondary-color);
+   font-weight: 500;
+   gap: 0.5rem;
+ }
+ 
+ /* Search Styles */
+ .search-container {
+   display: flex;
+   align-items: center;
+   background: var(--input-background);
+   padding: 0.29rem;
+   border: 1px solid #d2d2d2;
+   border-radius: 8px;
+   font-weight: 500;
+ }
+ 
+ .icon-left,
+ .icon-right {
+   padding: 5px;
+ }
+ 
+ .icon-left {
+   margin-right: 1vw;
+ }
+ 
+ .search-input {
+   flex-grow: 2;
+   border: none;
+   background-color: transparent;
+   width: 23vw;
+   font-weight: 500;
+ }

@@ -1,0 +1,163 @@
+.cardcarousel {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 35rem));
+   grid-auto-rows: 25rem;
+   padding: 0 0 2rem 0;
+   gap: 1rem;
+}
+
+.cardcarousel__body {
+   background: #ffffff;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+   padding: 2rem;
+   order: 9999;
+   border-radius: 1rem;
+   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.cardcarousel__title {
+   line-height: 2rem;
+   padding-right: 1rem;
+   font-weight: 700;
+   letter-spacing: -0.025em;
+   color: #111827;
+   text-shadow: 2px 2px #f0f0f0;
+}
+
+.cardcarousel__summary {
+   padding-top: 1.5rem;
+   padding-bottom: 5rem;
+   overflow: hidden;
+   font-size: 1rem;
+   font-weight: 400;
+   color: #374151;
+   text-shadow: 1px 1px #f0f0f0;
+}
+
+.cardcarousel__image {
+   width: 100%;
+   height: 100%;
+   padding: 0rem 2rem 0rem 0rem;
+}
+
+.cardcarousel__image img {
+   width: 100%;
+   height: 100%;
+   border-radius: 1rem;
+   object-fit: cover;
+}
+
+.cardcarousel__button {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.cardcarousel__button button {
+   width: 50%;
+   padding: 0.8rem 0.5rem;
+   font-size: 1rem;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.cardcarousel__button button:hover {
+   background-color: #45a049;
+}
+
+@media (max-width: 1360px) {
+   .cardcarousel {
+      grid-auto-rows: 22rem;
+      width: 80vw;
+   }
+}
+
+@media (max-width: 910px) {
+   .cardcarousel {
+      grid-template-columns: repeat(1, minmax(0, 20rem));
+      grid-auto-rows: 10rem;
+      width: 100%;
+   }
+
+   .cardcarousel__body {
+      grid-column: span 1 / span 1;
+      order: 9999;
+      padding: 1rem;
+      border-radius: 0rem 0rem 1rem 1rem;
+   }
+
+   .cardcarousel__image {
+      grid-column: span 1 / span 1;
+      padding: 0;
+      order: -9999;
+   }
+
+   .cardcarousel__image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem 1rem 0rem 0rem;
+   }
+
+   .cardcarousel__title {
+      line-height: 1rem;
+      padding-right: 0.05rem;
+      font-weight: 700;
+      font-size: 80%;
+      text-shadow: 1px 1px #f0f0f0;
+   }
+
+   .cardcarousel__summary {
+      padding-top: 0.7rem;
+      padding-bottom: 2.5rem;
+      font-size: 0.5rem;
+      text-shadow: 1px 1px #f0f0f0;
+   }
+
+   .cardcarousel__button {
+      width: 100%;
+      font-size: 0.7rem;
+   }
+
+   .cardcarousel__button button {
+      width: 45%;
+      padding: 0.4rem 0.2rem;
+      font-size: 0.8rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .cardcarousel__summary {
+      padding-bottom: 0.02rem;
+   }
+
+   .cardcarousel__button {
+      width: 100%;
+      font-size: 0.7rem;
+   }
+
+   .cardcarousel__button button {
+      width: 45%;
+      padding: 0.4rem 0.2rem;
+      font-size: 0.8rem;
+   }
+
+   .carousel__btn--left,
+   .carousel__btn--right {
+      display: none !important;
+   }
+
+   .carousel-item {
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(100%);
+   }
+
+   .carousel-item.active {
+      transform: translateX(-100%);
+    }
+}
